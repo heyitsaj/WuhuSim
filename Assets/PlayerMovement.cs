@@ -33,7 +33,7 @@ public class PlayerMovement : NetworkBehaviour
     public GameObject FloatText;
     GameObject script;
 
-    // Update is called once per frame
+    //Set first person view
     void Start(){
         Cursor.lockState = CursorLockMode.Locked;
         cameraTransform = GetComponentInChildren<Camera>().transform;
@@ -45,7 +45,7 @@ public class PlayerMovement : NetworkBehaviour
         script = GameObject.Find("DecideScript");
         FloatText.GetComponent<TextMesh>().text = script.GetComponent<DecideScript>().username;
     }
-    
+    //Input movement (jumping, turning, etc.)
     void Move()
     {
         isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
@@ -59,7 +59,7 @@ public class PlayerMovement : NetworkBehaviour
         float avgvel = Mathf.Abs(x) + Mathf.Abs(z);
         Vector3 move = transform.right * x + transform.forward * z;
         cc.Move(move * speed * Time.deltaTime);
-        if(Input.GetButtonDown("Jump")){
+        if(Input.GetButtonDown("Jump") && isGrounded){
             velocity.y = Mathf.Sqrt(jumpHeight * -1f * gravity);
         }
         if(Input.GetKeyDown(KeyCode.LeftShift)){
@@ -84,6 +84,7 @@ public class PlayerMovement : NetworkBehaviour
             player.transform.SetPositionAndRotation(position,rotation);
         }
     }
+    //Mouse movement for first person view
     void Look(){
         float mouseX = Input.GetAxis("Mouse X") * mouseSensitivity * Time.deltaTime;
         float mouseY = Input.GetAxis("Mouse Y") * mouseSensitivity * Time.deltaTime;
@@ -93,6 +94,7 @@ public class PlayerMovement : NetworkBehaviour
         player.Rotate(Vector3.up * mouseX);
     }
     void Update(){
+        //Updates server
         if (IsOwner){
             Move();
             Look();
