@@ -10,10 +10,8 @@ Lots of plans ahead, so I hope you enjoy!
 Also Nintendo, if you somehow come across this, it's all in good fun and I don't mean to infringe on any copyright. I'll take it down if needed, just don't sue me. I'm already in enough debt from college, the last thing I need is a lawsuit lol
 
 On that note, feel free to donate if you want.
-<form action="https://www.paypal.com/donate" method="post" target="_top">
-<input type="hidden" name="business" value="5BFWW9U5GZDUL" />
-<input type="hidden" name="no_recurring" value="0" />
-<input type="hidden" name="currency_code" value="USD" />
-<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif" border="0" name="submit" title="PayPal - The safer, easier way to pay online!" alt="Donate with PayPal button" />
-<img alt="" border="0" src="https://www.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1" />
-</form>
+
+![QR Code](https://user-images.githubusercontent.com/98556221/169878531-06ff94c2-7a23-44e8-966e-4042c0541458.png)
+
+[![btn_donate_LG](https://user-images.githubusercontent.com/98556221/169879060-1ab11ee3-2d27-4028-becc-17382e787a58.gif)](https://www.paypal.com/donate/?business=5BFWW9U5GZDUL&no_recurring=0&currency_code=USD)
+
