@@ -5,4 +5,4 @@ Walking around Wuhu Island
 - Join friends
 - That's about it lol
 
-Lots of plans ahead, so hope you enjoy!
+Lots of plans ahead, so I hope you enjoy!
