@@ -7,4 +7,4 @@ Walking around Wuhu Island
 
 Lots of plans ahead, so I hope you enjoy!
 
-Also Nintendo, if you somehow come across this, it's all in good fun and I don't mean to infringe on any copyright, I'll take it down if needed just don't sue me
+Also Nintendo, if you somehow come across this, it's all in good fun and I don't mean to infringe on any copyright. I'll take it down if needed, just don't sue me. I'm already in enough debt from college, the last thing I need is a lawsuit lol
