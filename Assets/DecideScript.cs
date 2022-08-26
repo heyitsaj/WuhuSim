@@ -13,6 +13,7 @@ public class DecideScript : NetworkBehaviour
     public Button Host;
     public Button Client;
     public Button Server;
+    public Button Quit;
     public Camera cam;
     public TMP_InputField ip;
     
@@ -170,12 +171,22 @@ public class DecideScript : NetworkBehaviour
             Server.GetComponentInChildren<TMP_Text>().text = "Server";
             if(IsClient||IsHost){
                 cam.gameObject.SetActive(false);
-            }
-            if(IsServer){
+                serverUI.gameObject.SetActive(false);
+            }else if(IsServer){
                 serverUI.gameObject.SetActive(true);
             }
             UI.gameObject.SetActive(false);
         }
+    }
+    void ChooseQuit(){
+        Application.Quit();
+    }
+    public void ExitServer(){
+        status = "";
+        NetworkManager.Shutdown();
+        cam.gameObject.SetActive(true);
+        UI.gameObject.SetActive(true);
+        serverUI.gameObject.SetActive(false);
     }
     //Establish listeners
     void Start(){
@@ -183,7 +194,9 @@ public class DecideScript : NetworkBehaviour
         Host.onClick.AddListener(ChooseHost);
         Client.onClick.AddListener(ChooseClient);
         Server.onClick.AddListener(ChooseServer);
+        Quit.onClick.AddListener(ChooseQuit);
         connectEvent.AddListener(ConnectionMade);
+        
     }
     //Check if connected: if not, reset switch
     void Update(){
